@@ -1,0 +1,36 @@
+<template>
+  <!-- 首页轮播图 -->
+  <div>
+    <div class="box">
+      <van-swipe :autoplay="3000">
+        <van-swipe-item v-for="(image, index) in images" :key="index">
+          <img v-lazy="image" />
+        </van-swipe-item>
+      </van-swipe>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "",
+  props: {},
+  data() {
+    return {};
+  },
+  components: {},
+  methods: {},
+  mounted() {},
+  computed: {},
+  watch: {},
+};
+</script>
+
+<style lang='scss' scoped>
+.box {
+  width: 100%;
+  height: 200px;
+  background: greenyellow;
+  margin-top: 5px;
+}
+</style>

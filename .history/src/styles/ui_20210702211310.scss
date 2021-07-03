@@ -1,0 +1,23 @@
+.login {
+    .van-field__label {
+        font-size: 14px;
+    }
+
+    .van-cell {
+        padding: 0px;
+    }
+
+    .van-field__label {
+        width: 80px;
+    }
+
+    .van-button {
+        width: 100px;
+        height: 45px;
+        margin: top 25px;
+    }
+
+    .van-button--danger {
+        margin-left: 10px;
+    }
+}
