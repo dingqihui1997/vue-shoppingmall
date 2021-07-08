@@ -1,0 +1,4 @@
+2021-07-08 00:00:01,048 INFO 9976 [egg-logrotator] app logger reload: got log-reload message
+2021-07-08 04:32:14,962 WARN 9976 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-08 04:32:14,971 INFO 9976 [-/127.0.0.1/-/1ms SCHEDULE /__schedule?path=E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "C:\\Users\\七环\\AppData\\Local\\Temp\\egg-multipart-tmp\\server"
+2021-07-08 04:32:14,975 INFO 9976 [-/127.0.0.1/-/6ms SCHEDULE /__schedule?path=E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
