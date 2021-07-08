@@ -1,7 +1,7 @@
 <template>
   <!-- 公共头部 -->
   <div>
-    <div class="box flex-a">
+    <div class="box flex-ja">
       <div class="left"><slot name="left"></slot></div>
       <div class="center"><slot name="center"></slot></div>
       <div class="right"><slot name="right"></slot></div>
@@ -28,13 +28,15 @@ export default {
 .box {
   width: 100%;
   height: 45px;
-  background-color: #f2f2f2;
+  background-color: #fff;
   position: relative;
+  top: 0;
 }
 .left {
   position: absolute;
   left: 10px;
 }
+
 .right {
   position: absolute;
   right: 10px;

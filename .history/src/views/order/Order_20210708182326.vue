@@ -1,0 +1,65 @@
+<template>
+  <!-- 全部订单 和已完成 -->
+  <div class="home">
+    <top>
+      <template #left
+        ><van-icon name="arrow-left" class="leftarrow"
+      /></template>
+      <template #center>我的订单</template>
+    </top>
+    <div>
+      <div class="box" v-for="(item, index) in list" :key="index">
+        <div class="flex-sb">
+          <div>订单号：{{ item.order_id }}</div>
+          <div>交易完成</div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "",
+  props: {},
+  data() {
+    return {
+      list: [],
+    };
+  },
+  components: {},
+  methods: {
+    getdata() {
+      //获取用户订单数量
+      this.$api
+        .getMyOrder()
+        .then((res) => {
+          this.list = res.list;
+          console.log(this.list);
+        })
+        .catch((err) => {
+          console.log("请求失败", err);
+        });
+    },
+  },
+  mounted() {
+    this.getdata();
+  },
+  computed: {},
+  watch: {},
+};
+</script>
+
+<style lang='scss' scoped>
+.home {
+  height: 100vh;
+  background: #eee;
+  .box {
+    width: 95%;
+    margin: 10px;
+    background: #fff;
+    padding: 5px;
+  }
+}
+</style>

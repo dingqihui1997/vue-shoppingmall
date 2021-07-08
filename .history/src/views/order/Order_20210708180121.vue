@@ -1,0 +1,35 @@
+<template>
+  <!-- 全部订单 和已完成 -->
+  <div class="home">
+    <top>
+      <template #left
+        ><van-icon name="arrow-left" class="leftarrow"
+      /></template>
+      <template #center>我的订单</template>
+    </top>
+    <div></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "",
+  props: {},
+  data() {
+    return {};
+  },
+  components: {},
+  methods: {},
+  mounted() {},
+  computed: {},
+  watch: {},
+};
+</script>
+
+<style lang='scss' scoped>
+.home {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+</style>

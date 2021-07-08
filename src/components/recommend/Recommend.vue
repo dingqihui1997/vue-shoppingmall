@@ -9,6 +9,7 @@
           :key="index"
           class="flex-d one"
           ref="one"
+          @click="click(item, index)"
         >
           <div><img :src="item.image" alt="" /></div>
           <div class="text">{{ item.goodsName }}</div>
@@ -17,12 +18,20 @@
             <div class="price">{{ `￥${item.price}` }}</div>
           </div>
           <div class="flex but">
-            <div class="gouwuc flex-ja"><van-icon name="cart" /></div>
+            <div class="gouwuc flex-ja">
+              <van-icon name="cart" @click.stop="goto(item)" />
+            </div>
             <div class="look flex-ja">查看详情</div>
           </div>
         </div>
       </div>
     </div>
+    <van-dialog v-model="show" show-cancel-button @confirm="confirm" allow-html>
+      <div class="dialog1">
+        <div class="dialog flex-ja font18">登录后才可使用此功能</div>
+        <div class="dialog2 flex-ja">是否跳转登录/注册页面</div>
+      </div>
+    </van-dialog>
   </div>
 </template>
 
@@ -39,6 +48,7 @@ export default {
   data() {
     return {
       scroll: null,
+      show: false,
     };
   },
   components: {},
@@ -59,6 +69,49 @@ export default {
           this.scroll.refresh(); //如果dom结构发生改变调用该方法
         }
       });
+    },
+    click(item, index) {
+      //跳转详情
+      this.$router.push({
+        path: "/details",
+        query: { id: item.goodsId },
+      });
+    },
+    confirm() {
+      //没登录时弹框点击确定时跳转
+      this.$router.push("/register");
+    },
+    goto(item) {
+      //点击购物车判断是否登录
+      // console.log(item);
+      if (localStorage.getItem("name") === null) {
+        //如果没登录就提示用户
+        this.show = true;
+      } else {
+        //如果登录就加入购物车，发请求加购商品
+        this.$api
+          .addShop(item.goodsId)
+          .then((res) => {
+            // console.log(res);
+            if (res.code === 200) {
+              //加入成功
+              this.$toast(res.msg);
+              this.$api
+                .getCard() //加入成功获取购物车里面的数据
+                .then((res) => {
+                  // console.log(res);
+                  localStorage.setItem("num", res.shopList.length);
+                  this.$store.commit("setBadge", res.shopList.length); //修改共享数据
+                })
+                .catch((err) => {
+                  console.log("请求失败", err);
+                });
+            }
+          })
+          .catch((err) => {
+            console.log("请求失败", err);
+          });
+      }
     },
   },
   mounted() {
@@ -87,6 +140,7 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
+
   .one {
     width: 125px;
     height: 180px;

@@ -1,0 +1,30 @@
+2021-07-05 23:41:20,962 ERROR 9268 [-/127.0.0.1/-/88ms POST /v1/editCart] nodejs.CastError: Cast to Number failed for value "fa750a815cfd46c3ba468db800f0e370" (type string) at path "mallPrice"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"fa750a815cfd46c3ba468db800f0e370\""
+kind: "Number"
+value: "fa750a815cfd46c3ba468db800f0e370"
+path: "mallPrice"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+valueType: "string"
+pid: 9268
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-05 23:42:22,948 ERROR 9268 [-/127.0.0.1/-/4ms POST /v1/editCart] nodejs.CastError: Cast to Number failed for value "fa750a815cfd46c3ba468db800f0e370" (type string) at path "mallPrice"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"fa750a815cfd46c3ba468db800f0e370\""
+kind: "Number"
+value: "fa750a815cfd46c3ba468db800f0e370"
+path: "mallPrice"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+valueType: "string"
+pid: 9268
+hostname: LAPTOP-F0FF6E0L
+

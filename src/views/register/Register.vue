@@ -2,7 +2,9 @@
   <!-- 注册登录页面 -->
   <div>
     <div class="box login">
-      <div class="top flex-ja"><van-icon name="arrow-left" /></div>
+      <div class="top flex-ja">
+        <van-icon name="arrow-left" @click="click" />
+      </div>
       <div class="text flex-d">
         <div class="title">登录 / 注册</div>
         <van-form @submit="onSubmit">
@@ -136,9 +138,12 @@ export default {
           verify: this.text,
         })
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           if (res.code === 200) {
             this.$toast(res.msg); //登录成功
+            localStorage.setItem("userInfo", JSON.stringify(res.userInfo)); //储存用户信息
+            localStorage.setItem("name", res.userInfo.nickname);
+            this.$router.push("/");
           } else {
             this.$toast(res.msg);
           }
@@ -146,6 +151,9 @@ export default {
         .catch((err) => {
           console.log("请求失败", err);
         });
+    },
+    click() {
+      this.$router.push("/");
     },
   },
   mounted() {

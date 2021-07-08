@@ -1,0 +1,70 @@
+2021-07-05 03:46:11,539 ERROR 12908 nodejs.ClusterClientNoResponseError: client no response in 2488696ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 12908
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-05 04:04:12,035 ERROR 12908 nodejs.ClusterClientNoResponseError: client no response in 220066ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 12908
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-05 04:18:47,240 ERROR 12908 nodejs.ClusterClientNoResponseError: client no response in 234857ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 12908
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-05 06:47:56,154 ERROR 12908 nodejs.ClusterClientNoResponseError: client no response in 545510ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 12908
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-05 21:32:17,304 ERROR 14564 nodejs.ClusterClientNoResponseError: client no response in 929831ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 14564
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-05 23:41:20,947 ERROR 9268 [-/127.0.0.1/-/88ms POST /v1/editCart] nodejs.CastError: Cast to Number failed for value "fa750a815cfd46c3ba468db800f0e370" (type string) at path "mallPrice"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"fa750a815cfd46c3ba468db800f0e370\""
+kind: "Number"
+value: "fa750a815cfd46c3ba468db800f0e370"
+path: "mallPrice"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+valueType: "string"
+pid: 9268
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-05 23:42:22,942 ERROR 9268 [-/127.0.0.1/-/4ms POST /v1/editCart] nodejs.CastError: Cast to Number failed for value "fa750a815cfd46c3ba468db800f0e370" (type string) at path "mallPrice"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"fa750a815cfd46c3ba468db800f0e370\""
+kind: "Number"
+value: "fa750a815cfd46c3ba468db800f0e370"
+path: "mallPrice"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+valueType: "string"
+pid: 9268
+hostname: LAPTOP-F0FF6E0L
+

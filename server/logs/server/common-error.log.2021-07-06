@@ -1,0 +1,62 @@
+2021-07-06 00:24:37,166 ERROR 9268 [-/127.0.0.1/-/6ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ e7ebc6153924459287468104768bee00: '' }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ e7ebc6153924459287468104768bee00: '' }\""
+kind: "string"
+value: {"e7ebc6153924459287468104768bee00":""}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 9268
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-06 00:25:32,204 ERROR 9268 [-/127.0.0.1/-/3ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '60dfd3afe779a71524c03015': '' }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ '60dfd3afe779a71524c03015': '' }\""
+kind: "string"
+value: {"60dfd3afe779a71524c03015":""}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 9268
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-06 05:31:22,695 ERROR 14564 nodejs.ClusterClientNoResponseError: client no response in 3650123ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 14564
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-06 05:41:10,699 ERROR 14564 nodejs.ClusterClientNoResponseError: client no response in 327854ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 14564
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-06 05:54:47,428 ERROR 14564 nodejs.ClusterClientNoResponseError: client no response in 556566ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 14564
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-06 06:36:02,909 ERROR 14564 nodejs.ClusterClientNoResponseError: client no response in 594733ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 14564
+hostname: LAPTOP-F0FF6E0L
+

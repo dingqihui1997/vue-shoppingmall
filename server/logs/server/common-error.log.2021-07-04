@@ -1,0 +1,39 @@
+2021-07-04 05:24:48,928 ERROR 18224 nodejs.ClusterClientNoResponseError: client no response in 13681275ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 18224
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-04 06:17:49,219 ERROR 18224 nodejs.ClusterClientNoResponseError: client no response in 2039801ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 18224
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-04 20:29:22,871 ERROR 12908 nodejs.ClusterClientNoResponseError: client no response in 730521ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 12908
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-04 22:47:57,662 ERROR 10900 [-/127.0.0.1/-/21ms POST /v1/search] nodejs.CastError: Cast to string failed for value "{ value: '水果' }" (type Object) at path "name" for model "Goods"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ value: '水果' }\""
+kind: "string"
+value: {"value":"水果"}
+path: "name"
+reason: null
+valueType: "Object"
+pid: 10900
+hostname: LAPTOP-F0FF6E0L
+

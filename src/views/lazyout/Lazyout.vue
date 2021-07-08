@@ -1,16 +1,19 @@
 <template>
   <!-- 父路由 -->
-  <div></div>
+  <div>
+    <foot></foot>
+  </div>
 </template>
 
 <script>
+import Foot from "../../components/foot/Foot.vue";
 export default {
   name: "",
   props: {},
   data() {
     return {};
   },
-  components: {},
+  components: { Foot },
   methods: {},
   mounted() {},
   computed: {},

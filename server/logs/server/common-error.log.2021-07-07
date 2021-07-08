@@ -1,0 +1,32 @@
+2021-07-07 05:23:18,860 ERROR 3748 nodejs.ClusterClientNoResponseError: client no response in 6915186ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 3748
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-07 06:22:07,788 ERROR 3748 nodejs.ClusterClientNoResponseError: client no response in 1288007ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 3748
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-07 21:05:32,035 ERROR 3008 nodejs.ClusterClientNoResponseError: client no response in 2072913ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 3008
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-07 21:23:41,544 ERROR 3008 nodejs.ClusterClientNoResponseError: client no response in 129119ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 3008
+hostname: LAPTOP-F0FF6E0L
+

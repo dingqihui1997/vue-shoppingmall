@@ -3,7 +3,11 @@
   <div>
     <div class="box">
       <van-swipe :autoplay="3000">
-        <van-swipe-item v-for="(item, index) in slides" :key="index">
+        <van-swipe-item
+          v-for="(item, index) in slides"
+          :key="index"
+          @click="click(item, index)"
+        >
           <img :src="item.image" class="img100" />
         </van-swipe-item>
       </van-swipe>
@@ -26,7 +30,14 @@ export default {
     };
   },
   components: {},
-  methods: {},
+  methods: {
+    click(item, index) {
+      this.$router.push({
+        path: "/details",
+        query: { id: item.goodsId },
+      });
+    },
+  },
   mounted() {
     // console.log(this.slides);
   },
