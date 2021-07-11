@@ -111,7 +111,7 @@ export default {
         return http.get(`/myOrder/orderNum`)
     },
 
-    comment({ id, rate, content, anonymous, _id, order_id, image }) {
+    comment(id, rate, content, anonymous, _id, order_id, image) {
         return http.post(`/goodsOne/comment`, { id, rate, content, anonymous, _id, order_id, image })
     },
     // ===============================================================================================================
@@ -152,8 +152,8 @@ export default {
         return http.post(`/setDefaultAddress`, { id })
     },
 
-    postAddress(name, tel, address, isDefault, province, city, county, addressDetail, areaCode) {
-        return http.post(`/address`, { name, tel, address, isDefault, province, city, county, addressDetail, areaCode })
+    postAddress(name, tel, address, isDefault, province, city, county, addressDetail, areaCode, id) {
+        return http.post(`/address`, { name, tel, address, isDefault, province, city, county, addressDetail, areaCode, id })
     },
 
     deleteAddress(id) {
@@ -196,21 +196,20 @@ export default {
         return http.get(`/myOrder`)
     },
 
-    alreadyEvaluated(page = 1) {
-        return http.get('/alreadyEvaluated', {
-            params: { page }
-        })
+    alreadyEvaluated() {
+        return http.get('/alreadyEvaluated',
+        )
     },
 
-    tobeEvaluated(page = 1) {
+    tobeEvaluated(page) {
         return http.get('/tobeEvaluated', {
             params: { page }
         })
     },
 
-    evaluateOne(_id) {
+    evaluateOne(id, _id) {
         return http.post('/evaluateOne', {
-            _id
+            id, _id
         })
     }
 }

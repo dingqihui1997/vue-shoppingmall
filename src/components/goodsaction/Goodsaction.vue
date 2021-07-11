@@ -126,15 +126,20 @@ export default {
         //如果没登录就提示用户
         this.show = true;
       } else {
-        console.log(12);
-        localStorage.removeItem("flag");
-        this.$set(this.goodsOne, "count", this.count); //给详情新增属性数量属性
-        this.$set(this.goodsOne, "cid", this.goodsOne.id); //新增cid
+        console.log(this.goodsOne);
+        localStorage.removeItem("flag"); //控制地址列表返回路径
+        this.$set(this.goodsOne, "count", this.count); //给详情新增属性数量属性,购买商品时的数量
+        this.$set(this.goodsOne, "cid", this.goodsOne.id); //新增cid购买商品需要传
         let arr = [];
-        arr.push(this.goodsOne); //储存为一个数组
+        arr.push(this.goodsOne); //要求时数组储存为一个数组
         localStorage.setItem("commodity", JSON.stringify(arr));
-        localStorage.setItem("idDirect", 1);
-        this.$router.push("/settlement");
+        localStorage.setItem("idDirect", 1); //分辨购物车结算还是直接购买
+        localStorage.setItem("cart", "Cart"); //用来控制结算页面返回路径
+        this.$router.push({
+          //点击购买然后跳转到结算页面并且传递id过去
+          path: "/settlement",
+          query: { id: this.goodsOne.id },
+        });
       }
     },
   },

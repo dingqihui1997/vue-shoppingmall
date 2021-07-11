@@ -82,6 +82,32 @@ van-cell van-field .dialog2 {
     .van-image__loading {
         border: 1px solid #666 !important;
     }
+}
 
+.tabs-line-wrap {
+    .van-tabs--line {
+        height: 11.733vw;
+        border-radius: 10px;
+        position: relative;
+        top: -22px;
+        left: 20px;
+        width: 90%;
+        box-shadow: 0 0 2px 1px #eee;
+    }
 
+    .van-pagination {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #fff;
+
+        .van-pagination__item {
+            color: #ff0000
+        }
+
+        .van-pagination__item--active {
+            color: #fff;
+            background-color: #ff0000 !important;
+        }
+    }
 }

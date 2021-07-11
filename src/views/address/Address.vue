@@ -15,7 +15,7 @@
       @edit="onEdit"
       @add="onAdd"
       @select="select"
-    />
+    ></van-address-list>
   </div>
 </template>
 
@@ -25,17 +25,17 @@ export default {
   props: {},
   data() {
     return {
-      address: [],
+      address: [], //地址列表
       chosenAddressId: 1,
     };
   },
   components: {},
   methods: {
     onEdit(item, index) {
-      //点击修改
-      console.log(item);
+      //点击修改，需要把目前内容赋到地址编辑里面的表单上
+      localStorage.setItem("cancel", 1); //点击编辑的时候储存一个值，来控制删除按钮
       this.$router.push({
-        path: "./newaddress",
+        path: "/newaddress",
         query: { obj: JSON.stringify(item) },
       });
     },
@@ -44,8 +44,12 @@ export default {
       this.$router.push("/newaddress");
     },
     back() {
-      //返回我的
-      this.$router.back();
+      if (localStorage.getItem("flag")) {
+        //点击我的地址管理储存的值
+        this.$router.push("/my");
+      } else {
+        this.$router.push("/Settlement");
+      }
     },
     getAddress() {
       //获取用户的地址
@@ -53,6 +57,14 @@ export default {
         .getAddress()
         .then((res) => {
           this.address = res.address;
+          this.address.map((item) => {
+            //新增一个属性动态绑定，才能单选一个
+            this.$set(item, "id", item._id);
+            if (item.isDefault) {
+              this.chosenAddressId = item.id;
+            }
+          });
+          console.log(this.address);
         })
         .catch((err) => {
           console.log("请求失败", err);
@@ -61,8 +73,9 @@ export default {
     select(item) {
       //选择地址时做的操作
       if (localStorage.getItem("flag")) {
+        //如果储存的有值，就不做操作，
       } else {
-        this.$router.back();
+        this.$router.back(); //没有值就直接返回上一步了
         localStorage.setItem("Address", JSON.stringify(item)); //item是选择的哪一个地址
       }
     },

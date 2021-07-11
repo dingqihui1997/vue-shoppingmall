@@ -47,7 +47,7 @@
           <van-field
             v-model="text"
             placeholder="请选择年月日"
-            :rules="[{ required: true, message: '请输入用户名' }]"
+            :rules="[{ required: true, message: '请选择年月日' }]"
           />
         </div>
       </div>

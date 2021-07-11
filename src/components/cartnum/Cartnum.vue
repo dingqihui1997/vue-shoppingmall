@@ -143,9 +143,11 @@ export default {
         //没选就提示用户选择商品
         this.$toast("请选择商品");
       } else {
+        console.log(this.shopList);
+
         //选中就储存，然后跳转到结算页面商品信息
         localStorage.setItem("commodity", JSON.stringify(arr1));
-        localStorage.setItem("idDirect", 0);
+        localStorage.setItem("idDirect", 0); //判断是直接购买还是购物车购买
         this.$router.push("/settlement");
       }
     },

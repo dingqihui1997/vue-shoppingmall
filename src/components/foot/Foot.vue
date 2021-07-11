@@ -51,6 +51,7 @@ export default {
     badge() {
       if (localStorage.getItem("name")) {
         return this.$store.state.badge; //获取加购的数量
+      } else {
       }
     },
   },

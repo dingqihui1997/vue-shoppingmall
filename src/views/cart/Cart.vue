@@ -66,6 +66,7 @@ export default {
       this.$store.commit("setBadge", this.shopList.length);
     },
     goto() {
+      //购物车没有东西就去首页
       this.$router.push("/");
     },
   },

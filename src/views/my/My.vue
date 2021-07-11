@@ -89,7 +89,7 @@ export default {
       } else {
         if (url === "/address") {
           //地址列表路径
-          localStorage.setItem("flag", 0);
+          localStorage.setItem("flag", 0); //用来判断用户是从那里进入地址列表的
         }
         this.$router.push(url);
       }

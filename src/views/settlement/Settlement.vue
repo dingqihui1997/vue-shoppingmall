@@ -56,8 +56,13 @@ export default {
       this.$api
         .getDefaultAddress()
         .then((res) => {
-          this.list = res.defaultAdd;
-          //   console.log(this.list);
+          if (res.defaultAdd) {
+            this.list = res.defaultAdd;
+            console.log(this.list); //如果用户有默认地址，就选择默认地址
+          } else {
+            //没有默认地址，就调用地址列表，选择第一个地址
+            this.getAddress();
+          }
         })
         .catch((err) => {
           console.log("请求失败", err);
@@ -68,12 +73,23 @@ export default {
       this.$router.push("/address");
     },
     back() {
-      this.$router.back(); //返回上一级
+      if (localStorage.getItem("cart")) {
+        //如果有值就是从详情直接购买过来的，返回详情
+        let id = this.$route.query.id;
+        console.log(id);
+        this.$router.push({ path: "/details", query: { id: id } }); //返回详情就清除
+      } else {
+        console.log(2222222222);
+        this.$router.push("/cart");
+        //没有就是从购物车购买的，就返回购物车，
+      } //返回上一级
+      localStorage.removeItem("cart");
     },
     onSubmit() {
       //   console.log(this.arr[0]);
       this.count = this.arr[0].count;
-      console.log(this.count);
+      // console.log(this.count);
+      // console.log(this.num);
       localStorage.getItem("idDirect"); //获取储存的值来区分是购物车还是直接购买
       let buer = Boolean(Number(localStorage.getItem("idDirect"))); //
       //   console.log(buer);
@@ -82,12 +98,12 @@ export default {
       });
       this.$api
         .placeOrder({
-          address: this.list.address,
-          tel: this.list.tel,
-          orderId: this.id, //所有商品的id
-          totalPrice: this.num, //价格
+          address: this.list.address, //详细地址
+          tel: this.list.tel, //电话
+          orderId: this.id, //所有商品的id数组
+          totalPrice: this.num, //总价格价格
           idDirect: buer, // 直接购购买还是购物车页面
-          count: this.count,
+          count: this.count, //数量
         })
         .then((res) => {
           console.log(res);
@@ -99,6 +115,18 @@ export default {
           console.log("请求失败", err);
         });
     },
+    getAddress() {
+      //获取用户的地址
+      this.$api
+        .getAddress()
+        .then((res) => {
+          this.list = res.address[0]; //选择地址类表的第一项
+          console.log(this.address);
+        })
+        .catch((err) => {
+          console.log("请求失败", err);
+        });
+    }, //获取用户列表
   },
   mounted() {
     //用户购买时选择结算地址
@@ -111,10 +139,12 @@ export default {
     }
     localStorage.removeItem("Address");
     this.arr = JSON.parse(localStorage.getItem("commodity")); //商品信息
-    console.log(this.arr);
+    // console.log(this.arr);
+    // console.log(this.list);
   },
   computed: {
     num() {
+      //总价格
       let sum = 0;
       this.arr.map((item) => {
         sum += item.count * item.present_price;

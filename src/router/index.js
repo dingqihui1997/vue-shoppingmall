@@ -36,9 +36,29 @@ const routes = [
     name: 'Evaluate',
     component: () => import('../views/evaluate/Evaluate.vue'),
     meta: {
-      title: '评价'
+      title: '评价中心'
     }
   },
+  {
+    path: '/comment',
+    name: 'Comment',
+    component: () => import('../views/comment/Comment.vue'),
+    meta: {
+      title: '发表评论'
+    }
+  },
+  {
+    path: '/commentdetails',
+    name: 'Commentdetails',
+    component: () => import('../views/commentDetails/CommentDetails.vue'),
+    meta: {
+      title: '发表评论'
+    }
+  },
+
+
+
+
   {
     path: '/details',
     name: 'Details',

@@ -2,8 +2,13 @@
   <!-- 首页分类板块 -->
   <div>
     <div class="box flex">
-      <div v-for="(item, index) in category" :key="index" class="flex1">
-        <div><img :src="item.image" alt="" /></div>
+      <div
+        v-for="(item, index) in category"
+        :key="index"
+        class="flex1"
+        @click="goto(item, index)"
+      >
+        <div><img :src="item.image" /></div>
         <div>{{ item.mallCategoryName }}</div>
       </div>
     </div>
@@ -30,10 +35,19 @@ export default {
     return {};
   },
   components: {},
-  methods: {},
+  methods: {
+    goto(item, index) {
+      localStorage.setItem("category", JSON.stringify(this.category));
+      this.$router.push({
+        path: "/classification",
+        query: {
+          key: index, //传递下标
+        },
+      });
+    },
+  },
   mounted() {
     // console.log(this.category);
-    // console.log(this.imgs);
   },
   computed: {},
   watch: {},

@@ -1,6 +1,5 @@
-2021-07-08 01:21:11,420 ERROR 9976 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
+2021-07-10 07:18:44,435 ERROR 23480 [-/127.0.0.1/-/11ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:184:40)
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
     at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
     at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
@@ -14,12 +13,11 @@
     at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
     at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
 
-pid: 9976
+pid: 23480
 hostname: LAPTOP-F0FF6E0L
 
-2021-07-08 01:22:47,017 ERROR 9976 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
+2021-07-10 07:18:50,698 ERROR 23480 [-/127.0.0.1/-/6ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:184:40)
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
     at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
     at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
@@ -33,181 +31,10 @@ hostname: LAPTOP-F0FF6E0L
     at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
     at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
 
-pid: 9976
+pid: 23480
 hostname: LAPTOP-F0FF6E0L
 
-2021-07-08 01:25:35,447 ERROR 9976 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
-    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
-    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
-    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
-    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
-    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
-    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
-    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
-    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
-
-pid: 9976
-hostname: LAPTOP-F0FF6E0L
-
-2021-07-08 01:29:37,455 ERROR 9976 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
-    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
-    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
-    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
-    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
-    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
-    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
-    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
-    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
-
-pid: 9976
-hostname: LAPTOP-F0FF6E0L
-
-2021-07-08 01:31:35,437 ERROR 9976 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
-    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
-    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
-    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
-    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
-    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
-    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
-    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
-    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
-
-pid: 9976
-hostname: LAPTOP-F0FF6E0L
-
-2021-07-08 01:32:02,364 ERROR 9976 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
-    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
-    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
-    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
-    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
-    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
-    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
-    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
-    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
-
-pid: 9976
-hostname: LAPTOP-F0FF6E0L
-
-2021-07-08 01:34:16,525 ERROR 9976 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
-    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
-    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
-    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
-    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
-    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
-    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
-    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
-    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
-
-pid: 9976
-hostname: LAPTOP-F0FF6E0L
-
-2021-07-08 01:37:26,071 ERROR 9976 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
-    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
-    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
-    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
-    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
-    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
-    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
-    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
-    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
-
-pid: 9976
-hostname: LAPTOP-F0FF6E0L
-
-2021-07-08 01:38:25,759 ERROR 9976 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
-    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
-    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
-    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
-    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
-    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
-    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
-    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
-    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
-
-pid: 9976
-hostname: LAPTOP-F0FF6E0L
-
-2021-07-08 01:40:36,618 ERROR 9976 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
-    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
-    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
-    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
-    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
-    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
-    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
-    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
-    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
-
-pid: 9976
-hostname: LAPTOP-F0FF6E0L
-
-2021-07-08 01:42:21,343 ERROR 9976 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
-    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
-    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
-    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
-    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
-    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
-    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
-    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
-    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
-    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
-    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
-
-pid: 9976
-hostname: LAPTOP-F0FF6E0L
-
-2021-07-08 01:44:57,599 ERROR 9976 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+2021-07-10 07:19:13,460 ERROR 23480 [-/127.0.0.1/-/5ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
     at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:184:40)
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
@@ -223,10 +50,10 @@ hostname: LAPTOP-F0FF6E0L
     at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
     at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
 
-pid: 9976
+pid: 23480
 hostname: LAPTOP-F0FF6E0L
 
-2021-07-08 01:45:10,063 ERROR 9976 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+2021-07-10 07:19:39,972 ERROR 23480 [-/127.0.0.1/-/5ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
     at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:184:40)
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
@@ -242,6 +69,6 @@ hostname: LAPTOP-F0FF6E0L
     at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
     at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
 
-pid: 9976
+pid: 23480
 hostname: LAPTOP-F0FF6E0L
 

@@ -70,7 +70,7 @@ export default {
       this.show = true; //点击图片然后预览显示
     },
     back() {
-      this.$router.push("/");
+      this.$router.back();
     },
   },
   mounted() {
