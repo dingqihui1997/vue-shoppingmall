@@ -149,7 +149,12 @@ export default {
   computed: {
     badge() {
       //登录了才获取本地储存的值
-      return this.$store.state.badge; //获取加购的数量
+      if (this.$store.state.badge === 0) {
+        return "";
+      } else {
+        return this.$store.state.badge;
+      }
+      // return this.$store.state.badge; //获取加购的数量
     },
   },
   watch: {},

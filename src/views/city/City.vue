@@ -17,7 +17,7 @@
     <div v-if="list.length === 0">
       <div class="current">当前城市</div>
       <div class="city flex-a">
-        <div class="local">{{ city }}</div>
+        <div class="local">{{ city ? city : "定位中" }}</div>
       </div>
       <div class="current">热门城市</div>
       <div class="hot flex-w">

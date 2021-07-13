@@ -34,6 +34,7 @@
     <reviews
       v-if="Object.keys(goodsOne).length !== 0"
       :goodsOne="goodsOne"
+      :comment="comment"
     ></reviews>
     <!-- 详情底部 -->
     <goodsaction
@@ -59,6 +60,7 @@ export default {
       index: 0, //预览显示的页码
       detail: "",
       active: 0,
+      comment: [], //评论
     };
   },
   components: { Goodsaction, Reviews, Collection },
@@ -72,15 +74,44 @@ export default {
     back() {
       this.$router.back();
     },
+    // History() {
+    //   //储存历史记录
+    //   let arr = [];
+    //   if (localStorage.getItem("History")) {
+    //     arr = JSON.parse(localStorage.getItem("History"));
+    //     let num = null;
+    //     num = arr.find((item) => {
+    //       return item.id === this.goodsOne.id; //未找到返回undefined
+    //     });
+    //     if (!num) {
+    //       //如果没找到就是false才push
+    //       arr.push(this.goodsOne);
+    //     }
+    //   } else {
+    //     arr.push(this.goodsOne);
+    //   }
+    //   localStorage.setItem("History", JSON.stringify(arr));
+    // },
+    History() {
+      //调用公共方法
+      this.$utils.saveHistory({
+        key: "",
+        data: this.goodsOne,
+        attr: "id",
+      });
+    },
   },
   mounted() {
     this.id = this.$route.query.id; //接收传递过来的id
     this.$api
       .goodOne(this.id)
       .then((res) => {
-        this.goodsOne = res.goods.goodsOne;
+        // console.log(res);
+        this.goodsOne = res.goods.goodsOne; //商品详情
+        this.History();
+        this.comment = res.goods.comment; //评价信息
         this.images = [this.goodsOne.image, this.goodsOne.image]; //预览图的路径，两张
-        // console.log(this.goodsOne);
+        // console.log(this.comment);
       })
       .catch((err) => {
         console.log("请求失败", err);

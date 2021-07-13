@@ -107,7 +107,6 @@ export default {
         arr1.map((item) => {
           this.cid.push(item.cid);
         });
-        console.log(this.cid);
         this.$api
           .deleteShop(this.cid)
           .then((res) => {
@@ -121,8 +120,6 @@ export default {
             console.log("请求失败", err);
           });
       }
-      //点击删除
-      //点击删除
     }, //点击删除
     see(item) {
       //点击查看详情
@@ -144,7 +141,6 @@ export default {
         this.$toast("请选择商品");
       } else {
         console.log(this.shopList);
-
         //选中就储存，然后跳转到结算页面商品信息
         localStorage.setItem("commodity", JSON.stringify(arr1));
         localStorage.setItem("idDirect", 0); //判断是直接购买还是购物车购买

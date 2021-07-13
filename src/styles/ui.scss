@@ -92,22 +92,27 @@ van-cell van-field .dialog2 {
         top: -22px;
         left: 20px;
         width: 90%;
-        box-shadow: 0 0 2px 1px #eee;
     }
 
-    .van-pagination {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background: #fff;
+    .van-tabs__wrap {
+        box-shadow: 0 1px 10px 2px #eee;
 
-        .van-pagination__item {
-            color: #ff0000
-        }
-
-        .van-pagination__item--active {
-            color: #fff;
-            background-color: #ff0000 !important;
-        }
     }
+
+    // .van-pagination {
+    //     position: fixed;
+    //     bottom: 0;
+    //     width: 100%;
+    //     background: #fff;
+
+    // .van-pagination__item {
+    //     color: #ff0000
+    // }
+
+    // .van-pagination__item--active {
+    //     color: #fff;
+    //     background-color: #ff0000 !important;
+    // }
+
+    // }
 }

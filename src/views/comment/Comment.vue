@@ -57,6 +57,10 @@ export default {
           )
           .then((res) => {
             console.log(res);
+            if (res.code === 200) {
+              this.$toast(res.msg);
+              this.$router.push("/evaluate");
+            }
           })
           .catch((err) => {
             console.log("请求失败", err);

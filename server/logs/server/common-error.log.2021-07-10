@@ -1,0 +1,119 @@
+2021-07-10 03:59:31,317 ERROR 3632 nodejs.ClusterClientNoResponseError: client no response in 9913981ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 3632
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-10 07:18:44,427 ERROR 23480 [-/127.0.0.1/-/11ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:184:40)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 23480
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-10 07:18:50,690 ERROR 23480 [-/127.0.0.1/-/6ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:184:40)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 23480
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-10 07:19:13,453 ERROR 23480 [-/127.0.0.1/-/5ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:184:40)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 23480
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-10 07:19:39,966 ERROR 23480 [-/127.0.0.1/-/5ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:184:40)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 23480
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-10 21:37:24,364 ERROR 17664 [-/127.0.0.1/-/4ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (E:\Users\七环\Desktop\mall\server\node_modules\_bson@1.1.6@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (E:\Users\七环\Desktop\mall\server\node_modules\_bson@1.1.6@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (E:\Users\七环\Desktop\mall\server\app\controller\api\user.js:453:52)
+    at Object.callFn (E:\Users\七环\Desktop\mall\server\node_modules\_egg-core@4.20.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\Users\七环\Desktop\mall\server\node_modules\_egg-core@4.20.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\Users\七环\Desktop\mall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\Users\七环\Desktop\mall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\Users\七环\Desktop\mall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\Users\七环\Desktop\mall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\Users\七环\Desktop\mall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\Users\七环\Desktop\mall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\Users\七环\Desktop\mall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\Users\七环\Desktop\mall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\Users\七环\Desktop\mall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\Users\七环\Desktop\mall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 17664
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-10 23:59:24,006 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 274380ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 00:01:42,580 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 138561ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+

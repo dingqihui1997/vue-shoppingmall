@@ -34,7 +34,7 @@ export default {
       address: {}, //用户填写的内容
       detailed: "",
       obj: {}, //收货人初始列表
-      show: "", //控制删除按钮
+      show: null, //控制删除按钮
     };
   },
   components: {},

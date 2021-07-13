@@ -108,7 +108,7 @@ export default {
   },
   mounted() {
     this.goods = JSON.parse(this.$route.query.goods);
-    // console.log(this.goods);
+    console.log(this.goods);
     this.evaluateOne();
   },
   computed: {},

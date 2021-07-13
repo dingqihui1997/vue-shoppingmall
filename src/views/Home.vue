@@ -61,7 +61,7 @@
     </div>
     <!-- 搜索时的页面 -->
     <div v-if="show === false">
-      <search :list="list" :value="value"></search>
+      <search :list="list" :value="value" @modify="modify"></search>
     </div>
   </div>
 </template>
@@ -147,10 +147,16 @@ export default {
         });
     },
     focus() {
+      //控制搜索框
       this.show = false;
     },
     cancel() {
       this.show = true;
+      this.value = "";
+    },
+    modify(item) {
+      //点击搜索
+      this.value = item;
     },
   },
   mounted() {

@@ -1,0 +1,73 @@
+2021-07-11 00:01:42,602 INFO 17664 [egg-logrotator] app logger reload: got log-reload message
+2021-07-11 00:10:11,881 WARN 17664 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-07-11 00:10:11,885 WARN 17664 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 00:28:12,700 WARN 17664 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 00:33:20,246 WARN 17664 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-07-11 00:33:20,280 WARN 17664 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 04:37:35,158 WARN 17664 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-07-11 04:37:35,161 WARN 17664 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 04:37:35,169 INFO 17664 [-/127.0.0.1/-/2ms SCHEDULE /__schedule?path=E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "C:\\Users\\七环\\AppData\\Local\\Temp\\egg-multipart-tmp\\server"
+2021-07-11 04:37:35,173 INFO 17664 [-/127.0.0.1/-/7ms SCHEDULE /__schedule?path=E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
+2021-07-11 05:54:41,769 WARN 17664 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-07-11 05:54:41,804 WARN 17664 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 06:12:31,920 WARN 17664 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 06:16:58,140 WARN 17664 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 06:40:59,910 WARN 17664 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-07-11 06:40:59,934 WARN 17664 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 06:45:43,753 INFO 26200 [egg:logger] init all loggers with options: {"dir":"E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-07-11 06:45:43,813 INFO 26200 [egg-multipart] stream mode enable
+2021-07-11 06:45:44,252 INFO 26200 [egg-mongoose] connecting mongodb://127.0.0.1/shoppingMall
+2021-07-11 06:45:44,613 INFO 26200 [egg-static] starting static serve /public/ -> E:\Users\七环\Desktop\mall\server\app\public
+2021-07-11 06:45:44,622 INFO 26200 [egg-security] use methodnoallow middleware
+2021-07-11 06:45:44,622 INFO 26200 [egg-security] use noopen middleware
+2021-07-11 06:45:44,624 INFO 26200 [egg-security] use nosniff middleware
+2021-07-11 06:45:44,626 INFO 26200 [egg-security] use xssProtection middleware
+2021-07-11 06:45:44,627 INFO 26200 [egg-security] use xframe middleware
+2021-07-11 06:45:44,629 INFO 26200 [egg-security] use dta middleware
+2021-07-11 06:45:44,629 INFO 26200 [egg-security] compose 6 middlewares into one security middleware
+2021-07-11 06:45:44,662 INFO 26200 [egg:core] dump config after load, 10ms
+2021-07-11 06:45:44,672 INFO 26200 [egg-mongoose] starting...
+2021-07-11 06:45:44,767 INFO 26200 [egg-mongoose] mongodb://127.0.0.1/shoppingMall connected successfully
+2021-07-11 06:45:44,777 INFO 26200 [egg-mongoose] instance[0] start successfully
+2021-07-11 06:45:44,781 INFO 26200 [egg-watcher:application] watcher start success
+2021-07-11 06:45:44,796 INFO 26200 [egg:core] dump config after ready, 8ms
+2021-07-11 06:57:29,993 INFO 3708 [egg:logger] init all loggers with options: {"dir":"E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-07-11 06:57:30,108 INFO 3708 [egg-multipart] stream mode enable
+2021-07-11 06:57:30,760 INFO 3708 [egg-mongoose] connecting mongodb://127.0.0.1/shoppingMall
+2021-07-11 06:57:32,911 INFO 3708 [egg-static] starting static serve /public/ -> E:\Users\七环\Desktop\mall\server\app\public
+2021-07-11 06:57:32,975 INFO 3708 [egg-security] use methodnoallow middleware
+2021-07-11 06:57:32,976 INFO 3708 [egg-security] use noopen middleware
+2021-07-11 06:57:32,978 INFO 3708 [egg-security] use nosniff middleware
+2021-07-11 06:57:32,979 INFO 3708 [egg-security] use xssProtection middleware
+2021-07-11 06:57:32,981 INFO 3708 [egg-security] use xframe middleware
+2021-07-11 06:57:32,983 INFO 3708 [egg-security] use dta middleware
+2021-07-11 06:57:32,983 INFO 3708 [egg-security] compose 6 middlewares into one security middleware
+2021-07-11 06:57:33,593 INFO 3708 [egg:core] dump config after load, 92ms
+2021-07-11 06:57:33,729 INFO 3708 [egg-mongoose] starting...
+2021-07-11 06:57:34,695 INFO 3708 [egg-mongoose] mongodb://127.0.0.1/shoppingMall connected successfully
+2021-07-11 06:57:34,988 INFO 3708 [egg-mongoose] instance[0] start successfully
+2021-07-11 06:57:35,169 INFO 3708 [egg-watcher:application] watcher start success
+2021-07-11 06:57:35,369 INFO 3708 [egg:core] dump config after ready, 158ms
+2021-07-11 16:50:39,022 INFO 10716 [egg:logger] init all loggers with options: {"dir":"E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-07-11 16:50:39,052 INFO 10716 [egg-multipart] stream mode enable
+2021-07-11 16:50:39,579 INFO 10716 [egg-mongoose] connecting mongodb://127.0.0.1/shoppingMall
+2021-07-11 16:50:39,983 INFO 10716 [egg-static] starting static serve /public/ -> E:\Users\七环\Desktop\mall\server\app\public
+2021-07-11 16:50:39,986 INFO 10716 [egg-security] use methodnoallow middleware
+2021-07-11 16:50:39,986 INFO 10716 [egg-security] use noopen middleware
+2021-07-11 16:50:39,987 INFO 10716 [egg-security] use nosniff middleware
+2021-07-11 16:50:39,988 INFO 10716 [egg-security] use xssProtection middleware
+2021-07-11 16:50:39,988 INFO 10716 [egg-security] use xframe middleware
+2021-07-11 16:50:39,989 INFO 10716 [egg-security] use dta middleware
+2021-07-11 16:50:39,989 INFO 10716 [egg-security] compose 6 middlewares into one security middleware
+2021-07-11 16:50:40,016 INFO 10716 [egg:core] dump config after load, 9ms
+2021-07-11 16:50:40,023 INFO 10716 [egg-mongoose] starting...
+2021-07-11 16:50:40,083 INFO 10716 [egg-mongoose] mongodb://127.0.0.1/shoppingMall connected successfully
+2021-07-11 16:50:40,090 INFO 10716 [egg-mongoose] instance[0] start successfully
+2021-07-11 16:50:40,092 INFO 10716 [egg-watcher:application] watcher start success
+2021-07-11 16:50:40,104 INFO 10716 [egg:core] dump config after ready, 8ms
+2021-07-11 18:24:25,710 WARN 10716 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 21:11:41,449 WARN 10716 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-11 21:33:40,889 WARN 10716 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-12 00:00:00,103 INFO 10716 [egg-logrotator] clean all log before 31 days
+2021-07-12 00:00:01,033 INFO 10716 [egg-logrotator] broadcast log-reload
+2021-07-12 00:00:01,034 INFO 10716 [egg-logrotator] rotate files success by DayRotator, files ["E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\common-error.log -> E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\common-error.log.2021-07-11","E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\server-web.log -> E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\server-web.log.2021-07-11","E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\egg-web.log -> E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\egg-web.log.2021-07-11","E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\egg-schedule.log -> E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\egg-schedule.log.2021-07-11","E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\egg-agent.log -> E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server\\egg-agent.log.2021-07-11"]

@@ -1,0 +1,88 @@
+2021-07-11 00:10:11,878 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 429265ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 00:28:12,700 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 280462ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 00:33:20,248 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 307525ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 04:37:35,174 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 8232264ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 05:54:41,768 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 706713ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 06:12:31,923 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 1070085ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 06:16:58,143 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 266211ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 06:40:59,907 ERROR 4512 nodejs.ClusterClientNoResponseError: client no response in 581428ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 4512
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 18:24:25,709 ERROR 11724 nodejs.ClusterClientNoResponseError: client no response in 343512ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 11724
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 21:11:41,449 ERROR 11724 nodejs.ClusterClientNoResponseError: client no response in 3833261ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 11724
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-11 21:33:40,889 ERROR 11724 nodejs.ClusterClientNoResponseError: client no response in 1199365ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 11724
+hostname: LAPTOP-F0FF6E0L
+

@@ -196,15 +196,13 @@ export default {
         return http.get(`/myOrder`)
     },
 
-    alreadyEvaluated() {
-        return http.get('/alreadyEvaluated',
+    alreadyEvaluated(page) {
+        return http.get(`/alreadyEvaluated?page=${page}`,
         )
     },
 
     tobeEvaluated(page) {
-        return http.get('/tobeEvaluated', {
-            params: { page }
-        })
+        return http.get(`/tobeEvaluated?page=${page}`)
     },
 
     evaluateOne(id, _id) {

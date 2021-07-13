@@ -73,18 +73,19 @@ export default {
   mounted() {
     if (!localStorage.getItem("name")) {
       this.flag = true;
+    } else {
+      this.$api
+        .getCard() //加入成功获取购物车里面的数据
+        .then((res) => {
+          this.shopList = res.shopList;
+          localStorage.setItem("num", res.shopList.length);
+          this.$store.commit("setBadge", res.shopList.length); //修改共享数据
+        })
+        .catch((err) => {
+          console.log("请求失败", err);
+        });
     }
     this.name = localStorage.getItem("name"); //先获取存储的值没有储存表示没登录，就显示没登录状态
-    this.$api
-      .getCard() //加入成功获取购物车里面的数据
-      .then((res) => {
-        // console.log(res);
-        this.shopList = res.shopList;
-        // console.log(this.shopList);
-      })
-      .catch((err) => {
-        console.log("请求失败", err);
-      });
   },
   computed: {},
   watch: {},

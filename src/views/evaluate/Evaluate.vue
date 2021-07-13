@@ -1,53 +1,67 @@
 <template>
   <!-- 评价 待评价和已评价 -->
   <div class="tabs-line-wrap">
-    <top>
-      <template #left
-        ><van-icon name="arrow-left" class="leftarrow" @click="back"
-      /></template>
-      <template #center>评价中心</template>
-    </top>
+    <van-sticky>
+      <top>
+        <template #left
+          ><van-icon name="arrow-left" class="leftarrow" @click="back"
+        /></template>
+        <template #center>评价中心</template>
+      </top>
+    </van-sticky>
     <div class="img">
       <img src="../../assets/evaluate.jpg" class="img100" />
     </div>
-    <van-tabs v-model="active">
+    <van-tabs v-model="active" sticky>
       <van-tab title="待评价">
-        <div
-          v-for="(item, index) in list"
-          :key="index"
-          class="flex box"
-          @click="goto(item)"
-        >
-          <div class="image_path"><img :src="item.image_path" alt="" /></div>
-          <div class="name">{{ item.name }}</div>
-          <div class="order flex-ja"><van-icon name="chat" />评论晒单</div>
-        </div>
-        <div class="zhanwei"></div>
+        <van-pull-refresh v-model="refreshing">
+          <van-list
+            v-model="loading"
+            :finished="finished"
+            finished-text="没有更多了"
+            @load="onLoad"
+          >
+            <div
+              v-for="(item, index) in list"
+              :key="index"
+              class="flex box"
+              @click="goto(item)"
+            >
+              <div class="image_path">
+                <img :src="item.image_path" alt="" />
+              </div>
+              <div class="name">{{ item.name }}</div>
+              <div class="order flex-ja"><van-icon name="chat" />评论晒单</div>
+            </div>
+          </van-list>
+        </van-pull-refresh>
       </van-tab>
       <van-tab title="已评价">
-        <div>
-          <div
-            v-for="(item, index) in goods"
-            :key="index"
-            class="flex box"
-            @click="look(item)"
+        <van-pull-refresh v-model="refreshing">
+          <van-list
+            v-model="loading"
+            :finished="finished"
+            finished-text="没有更多了"
+            @load="onLoad1"
           >
-            <div class="image_path">
-              <img :src="item.goods[0].image_path" alt="" />
+            <div>
+              <div
+                v-for="(item, index) in goods"
+                :key="index"
+                class="flex box"
+                @click="look(item)"
+              >
+                <div class="image_path flex-ja">
+                  <img :src="item.goods[0].image_path" alt="" />
+                </div>
+                <div class="name">{{ item.goods[0].name }}</div>
+                <div class="order1 flex-ja">查看评价</div>
+              </div>
             </div>
-            <div class="name">{{ item.goods[0].name }}</div>
-            <div class="order1 flex-ja">查看评价</div>
-          </div>
-        </div>
+          </van-list>
+        </van-pull-refresh>
       </van-tab>
     </van-tabs>
-    <van-pagination
-      v-model="currentPage"
-      :page-count="5"
-      :items-per-page="10"
-      mode="simple"
-      @change="change"
-    />
   </div>
 </template>
 
@@ -59,60 +73,89 @@ export default {
     return {
       active: 0,
       list: [], //待评价
-      currentPage: 1,
+      loading: false,
+      finished: false,
+      refreshing: false,
+      page: 1,
       goods: [], //已评价商品信息
+      count: 0,
+      count1: 0,
+      page1: 1, //已评价
     };
   },
   components: {},
   methods: {
     tobeEvaluated() {
-      //获取待评价数
       this.$api
-        .tobeEvaluated(this.currentPage)
+        .tobeEvaluated(this.page)
         .then((res) => {
-          this.list = res.data.list;
+          // console.log(res);
+          this.count = res.data.count;
+          this.list = this.list.concat(res.data.list);
+          // console.log(this.list);
         })
         .catch((err) => {
           console.log("请求失败", err);
         });
-    },
-    change(Page) {
-      //点击页数时触发
-      this.currentPage = Page;
-      this.tobeEvaluated();
-    },
+    }, //获取待评价数
     goto(item) {
-      //去评价
       this.$router.push({
         path: "/comment",
         query: { goodsone: JSON.stringify(item) },
       });
-    },
+    }, //去评价
     alreadyEvaluated() {
-      //已评价信息
       this.$api
-        .alreadyEvaluated()
+        .alreadyEvaluated(this.page1)
         .then((res) => {
-          this.goods = res.data.list;
+          this.count1 = res.data.count;
+          this.goods = this.goods.concat(res.data.list);
         })
         .catch((err) => {
           console.log("请求失败", err);
         });
-    },
+    }, //已评价信息
     look(item) {
-      //查看已评价详情
       this.$router.push({
         path: "/commentdetails",
         query: { goods: JSON.stringify(item) },
       });
-    },
+    }, //查看已评价详情
     back() {
       this.$router.push("/my");
-    },
+    }, //返回我的
+    onLoad() {
+      setTimeout(() => {
+        if (this.refreshing) {
+          this.list = [];
+          this.refreshing = false;
+        }
+        if (this.list.length >= this.count) {
+          this.finished = true;
+        }
+        this.page++;
+        this.tobeEvaluated();
+        this.loading = false;
+      }, 1000);
+    }, //待评价下拉刷新
+    onLoad1() {
+      setTimeout(() => {
+        if (this.refreshing) {
+          this.goods = [];
+          this.refreshing = false;
+        }
+        if (this.goods.length >= this.count1) {
+          this.finished = true;
+        }
+        this.page1++;
+        this.alreadyEvaluated();
+        this.loading = false;
+      }, 1000);
+    }, //已评价下拉刷新
   },
   mounted() {
-    this.tobeEvaluated(this.currentPage); //待评价
-    this.alreadyEvaluated();
+    this.tobeEvaluated(); //待评价
+    this.alreadyEvaluated(); //已评价
   },
   computed: {},
   watch: {},
@@ -124,16 +167,12 @@ export default {
   height: 160px;
   width: 100%;
 }
-.van-tabs--line .van-tabs__wrap {
-  height: 11.733vw;
-  border-radius: 10px;
-  position: relative;
-  top: -22px;
-  left: 20px;
-  width: 90%;
-  box-shadow: 0 0 2px 1px #eee;
+.van-tabs {
+  overflow: hidden;
+  height: 100%;
 }
 .image_path {
+  margin-top: 10px;
   img {
     width: 80px;
     height: 80px;
@@ -166,6 +205,7 @@ export default {
   margin-top: 10px;
 }
 .box {
+  height: 100px;
   position: relative;
   border-bottom: 1px #eee solid;
 }

@@ -26,7 +26,10 @@
           :rules="[{ required: true, message: '请输入用户名' }]"
         />
       </div>
-      <div class="one flex-a">昵称</div>
+      <div class="one flex-a">
+        <div class="user">昵称</div>
+        <van-field v-model="userInfo.username" disabled></van-field>
+      </div>
       <!-- 性别 -->
       <div class="one flex-a">
         性别
@@ -77,12 +80,10 @@ export default {
   data() {
     return {
       minDate: new Date(1960, 0, 1),
-      maxDate: new Date(2021, 11, 31),
+      maxDate: new Date(), //最大直接就是今天的时间
       currentDate: new Date(),
       flag: false, //时间选择器控制器
       text: "", //年月日
-      //   radio: "1", //性别
-      //   name: "", //用户名
       userInfo: "", //储存的用户信息
       birthday: "", //初始的生日
     };
@@ -99,7 +100,7 @@ export default {
     confirm(date) {
       //选择时间确认
       this.flag = false;
-      this.text = dayjs(date).format("YYYY年MM月DD日");
+      this.text = dayjs(date).format("YYYY年MM月DD日"); //把时间赋给输入框
     },
     cancel() {
       //选择时间的取消按钮
@@ -117,16 +118,16 @@ export default {
       ) {
         this.$toast("请填写完整信息");
       } else {
-        this.$set(this.userInfo, "time", this.text);
+        this.userInfo.time = this.text;
         localStorage.setItem("userInfo", JSON.stringify(this.userInfo));
-        this.$router.back();
+        this.$router.back("/my");
       }
     },
   },
   mounted() {
     this.userInfo = JSON.parse(localStorage.getItem("userInfo"));
-    this.text = `${this.userInfo.year}年${this.userInfo.month}月${this.userInfo.day}日`;
-    // console.log(this.userInfo);
+    this.text = this.userInfo.time; //初始的时间
+    // console.log(this.text);
   },
   computed: {},
   watch: {},

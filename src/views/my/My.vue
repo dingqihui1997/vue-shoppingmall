@@ -114,7 +114,7 @@ export default {
   },
   mounted() {
     this.userInfo = JSON.parse(localStorage.getItem("userInfo"));
-    console.log(this.userInfo); //获取用户储存的值
+    // console.log(this.userInfo); //获取用户储存的值
   },
   computed: {},
   watch: {},

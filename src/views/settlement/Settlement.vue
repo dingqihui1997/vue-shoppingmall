@@ -7,7 +7,7 @@
       /></template>
       <template #center>订单结算</template>
     </top>
-    <div class="box flex-a">
+    <div class="box flex-a" v-if="Object.keys(list).length !== 0">
       <div><van-icon name="location-o" class="icono" /></div>
       <div class="name flex-d">
         <div class="flex-sb tel">
@@ -16,6 +16,15 @@
         </div>
         <div class="flex-sb tel">
           <div>收货地址：{{ list.address }}</div>
+          <div><van-icon name="arrow" @click="choice" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="box flex-a" v-else>
+      <div><van-icon name="location-o" class="icono" /></div>
+      <div class="name flex-d">
+        <div class="flex-sb tel">
+          暂无收货地址请先添加哦
           <div><van-icon name="arrow" @click="choice" /></div>
         </div>
       </div>
@@ -46,7 +55,7 @@ export default {
       list: {}, //地址信息
       arr: [], //商品信息
       id: [], //结算时传的id数组:[]
-      count: null,
+      count: null, //
     };
   },
   components: {},
@@ -57,8 +66,8 @@ export default {
         .getDefaultAddress()
         .then((res) => {
           if (res.defaultAdd) {
+            //如果用户有默认地址，就选择默认地址
             this.list = res.defaultAdd;
-            console.log(this.list); //如果用户有默认地址，就选择默认地址
           } else {
             //没有默认地址，就调用地址列表，选择第一个地址
             this.getAddress();
@@ -79,54 +88,65 @@ export default {
         console.log(id);
         this.$router.push({ path: "/details", query: { id: id } }); //返回详情就清除
       } else {
-        console.log(2222222222);
         this.$router.push("/cart");
         //没有就是从购物车购买的，就返回购物车，
       } //返回上一级
       localStorage.removeItem("cart");
     },
     onSubmit() {
-      //   console.log(this.arr[0]);
-      this.count = this.arr[0].count;
-      // console.log(this.count);
-      // console.log(this.num);
-      localStorage.getItem("idDirect"); //获取储存的值来区分是购物车还是直接购买
-      let buer = Boolean(Number(localStorage.getItem("idDirect"))); //
-      //   console.log(buer);
-      this.arr.map((item) => {
-        this.id.push(item.cid);
-      });
-      this.$api
-        .placeOrder({
-          address: this.list.address, //详细地址
-          tel: this.list.tel, //电话
-          orderId: this.id, //所有商品的id数组
-          totalPrice: this.num, //总价格价格
-          idDirect: buer, // 直接购购买还是购物车页面
-          count: this.count, //数量
-        })
-        .then((res) => {
-          console.log(res);
-          if (res.code === 200) {
-            this.$router.push("/Order"); //结算成功，跳转已完成页面
-          }
-        })
-        .catch((err) => {
-          console.log("请求失败", err);
+      //结算按钮
+      if (Object.keys(this.list).length === 0) {
+        //如果用户没有地址点击提交提醒用户
+        this.$toast("请添加收货地址哦");
+      } else {
+        this.count = this.arr[0].count;
+        localStorage.getItem("idDirect"); //获取储存的值来区分是购物车还是直接购买
+        let buer = Boolean(Number(localStorage.getItem("idDirect"))); //
+        //   console.log(buer);
+        this.arr.map((item) => {
+          this.id.push(item.cid);
         });
+        this.$api
+          .placeOrder({
+            address: this.list.address, //详细地址
+            tel: this.list.tel, //电话
+            orderId: this.id, //所有商品的id数组
+            totalPrice: this.num, //总价格价格
+            idDirect: buer, // 直接购购买还是购物车页面
+            count: this.count, //数量
+          })
+          .then((res) => {
+            console.log(res);
+            if (res.code === 200) {
+              this.$router.push("/Order"); //结算成功，跳转已完成页面
+              let num = this.$store.state.badge; //修改购物车的数量，
+              num = num - this.arr.length; //用原有的值减去结算了的值，并修改
+              localStorage.setItem("num", num);
+              this.$store.commit("setBadge", num);
+            }
+          })
+          .catch((err) => {
+            console.log("请求失败", err);
+          });
+      }
     },
     getAddress() {
       //获取用户的地址
       this.$api
         .getAddress()
         .then((res) => {
-          this.list = res.address[0]; //选择地址类表的第一项
-          console.log(this.address);
+          // console.log(res.address); //没有默认地址，就获取地址列表里面的第一个地址
+          if (res.address.length !== 0) {
+            this.list = res.address[0];
+          } else {
+            //如果地址列表为空，那就赋值空，提醒用户新增地址
+            this.list = {};
+          }
         })
         .catch((err) => {
           console.log("请求失败", err);
         });
-    }, //获取用户列表
+    }, //获取用户地址列表
   },
   mounted() {
     //用户购买时选择结算地址
