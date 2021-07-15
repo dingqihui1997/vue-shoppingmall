@@ -1,0 +1,103 @@
+2021-07-13 01:33:51,665 ERROR 21224 [-/127.0.0.1/-/16ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '418fc60784d04e71beffe1ce5174c947': '' }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ '418fc60784d04e71beffe1ce5174c947': '' }\""
+kind: "string"
+value: {"418fc60784d04e71beffe1ce5174c947":""}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 21224
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-13 01:34:04,036 ERROR 21224 [-/127.0.0.1/-/3ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '418fc60784d04e71beffe1ce5174c947': '' }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ '418fc60784d04e71beffe1ce5174c947': '' }\""
+kind: "string"
+value: {"418fc60784d04e71beffe1ce5174c947":""}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 21224
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-13 05:26:56,901 ERROR 13492 nodejs.ClusterClientNoResponseError: client no response in 376535ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 13492
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-13 09:20:57,660 ERROR 13492 nodejs.ClusterClientNoResponseError: client no response in 14040743ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 13492
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-13 16:25:24,996 ERROR 13492 nodejs.ClusterClientNoResponseError: client no response in 25467215ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 13492
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-13 17:05:03,366 ERROR 3212 [-/127.0.0.1/-/6ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\Users\七环\Desktop\mall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\app\middleware\isLogin.js:15:13
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\Users\七环\Desktop\mall\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\Users\七环\Desktop\mall\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\Users\七环\Desktop\mall\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\Users\七环\Desktop\mall\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\Users\七环\Desktop\mall\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 3212
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-13 19:13:42,024 ERROR 16484 [-/127.0.0.1/-/10ms POST /v1/search] nodejs.CastError: Cast to string failed for value "{ name: '香蕉' }" (type Object) at path "name" for model "Goods"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ name: '香蕉' }\""
+kind: "string"
+value: {"name":"香蕉"}
+path: "name"
+reason: null
+valueType: "Object"
+pid: 16484
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-13 19:13:52,702 ERROR 16484 [-/127.0.0.1/-/2ms POST /v1/search] nodejs.CastError: Cast to string failed for value "{ name: '香蕉' }" (type Object) at path "name" for model "Goods"
+    at model.Query.exec (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\Users\七环\Desktop\mall\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ name: '香蕉' }\""
+kind: "string"
+value: {"name":"香蕉"}
+path: "name"
+reason: null
+valueType: "Object"
+pid: 16484
+hostname: LAPTOP-F0FF6E0L
+

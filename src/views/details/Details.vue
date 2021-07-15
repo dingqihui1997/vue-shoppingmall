@@ -93,12 +93,15 @@ export default {
     //   localStorage.setItem("History", JSON.stringify(arr));
     // },
     History() {
-      //调用公共方法
-      this.$utils.saveHistory({
-        key: "",
-        data: this.goodsOne,
-        attr: "id",
-      });
+      //调用公共方法,储存浏览记录
+      if (localStorage.getItem("name")) {
+        this.$utils.saveHistory({
+          user: localStorage.getItem("name"),
+          key: "browse",
+          data: this.goodsOne,
+          attr: "id",
+        });
+      }
     },
   },
   mounted() {

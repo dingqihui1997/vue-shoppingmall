@@ -120,7 +120,15 @@ export default {
         .then((res) => {
           console.log(res);
           if (res.code === 200) {
-            this.$toast(res.msg); //注册成功
+            this.$toast(res.msg); //登录成功
+            this.$set(
+              res.userInfo,
+              "time",
+              `${res.userInfo.year}年${res.userInfo.month}月${res.userInfo.day}日`
+            );
+            localStorage.setItem("userInfo", JSON.stringify(res.userInfo)); //储存用户信息
+            localStorage.setItem("name", res.userInfo.username);
+            this.$router.push("/");
           } else {
             this.$toast(res.msg);
           }
@@ -147,7 +155,7 @@ export default {
               `${res.userInfo.year}年${res.userInfo.month}月${res.userInfo.day}日`
             );
             localStorage.setItem("userInfo", JSON.stringify(res.userInfo)); //储存用户信息
-            localStorage.setItem("name", res.userInfo.nickname);
+            localStorage.setItem("name", res.userInfo.username);
             this.$router.push("/");
           } else {
             this.$toast(res.msg);

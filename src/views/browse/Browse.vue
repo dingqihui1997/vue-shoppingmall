@@ -49,12 +49,21 @@ export default {
     }, //跳详情页面
     del(item) {
       this.list.splice(item, 1);
-      localStorage.setItem("History", JSON.stringify(this.list));
+      localStorage.setItem(
+        `${localStorage.getItem("name")}browseHistory`,
+        JSON.stringify(this.list)
+      );
     }, //删除
   },
   mounted() {
-    this.list = this.$utils.getHistory({ key: "" });
-    this.list.reverse();
+    let a = this.$utils.getHistory({
+      user: `${localStorage.getItem("name")}`,
+      key: "browse",
+    });
+    if (a) {
+      this.list = a;
+      this.list.reverse();
+    }
   },
   computed: {},
   watch: {},

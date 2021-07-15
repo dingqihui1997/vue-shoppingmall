@@ -73,7 +73,7 @@ export default {
   },
   mounted() {
     this.list = JSON.parse(this.$route.query.goodsone);
-    console.log(this.list);
+    // console.log(this.list);
   },
   computed: {},
   watch: {},
@@ -105,6 +105,8 @@ export default {
     height: 100%;
     border: none;
     background: #f7f7f7;
+    padding-top: 10px;
+    padding-left: 10px;
   }
   .van-uploader {
     position: relative;

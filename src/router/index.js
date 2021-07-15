@@ -154,8 +154,15 @@ const routes = [
       }
 
     ]
-
-  }
+  },
+  {
+    path: '*',
+    name: '',
+    component: () => import('../views/404/404.vue'),
+    meta: {
+      title: 'mall'
+    }
+  },
 ]
 
 const router = new VueRouter({
@@ -166,5 +173,16 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title
   next()
+  let user = localStorage.getItem('name')
+  if (user) {
+    next()
+  } else {
+    if (to.path === '/' || to.path === '/details' || to.path === '/register' || to.path === '/city' || to.path === '/classification' || to.path === '/cart' || to.path === '/my') {
+      next()
+    } else {
+      next('/')
+    }
+  }
+
 })
 export default router

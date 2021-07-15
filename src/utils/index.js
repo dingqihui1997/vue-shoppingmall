@@ -26,8 +26,8 @@ export default {
     // 储存记录(浏览记录browse，搜索记录search)
     // key:储存的历史
     // attr:判断元素是否存在的属性名
-    saveHistory({ key, data, attr }) {
-        let name = key + 'History'
+    saveHistory({ user, key, data, attr }) {
+        let name = user + key + 'History'
         let history = localStorage.getItem(name)
         if (history) {//之前储存过
             let arr = JSON.parse(localStorage.getItem(name))
@@ -66,8 +66,8 @@ export default {
         }
     },
     // 获取储存记录
-    getHistory({ key }) {
-        let name = key + 'History'
+    getHistory({ user, key }) {
+        let name = user + key + 'History'
         let arr = localStorage.getItem(name)
         if (arr) return JSON.parse(arr)
         else return null

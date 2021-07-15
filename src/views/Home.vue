@@ -23,45 +23,52 @@
         <!-- <div v-else>搜索</div> -->
       </template>
     </top>
-    <!-- 首页数据 -->
-    <div v-if="show === true">
-      <!-- 轮播图 -->
-      <carousel v-if="slides.length !== 0" :slides="slides"></carousel>
-      <!-- 分类 -->
-      <homepage
-        v-if="category.length !== 0"
-        :category="category"
-        :imgs="imgs"
-      ></homepage>
-      <!-- 商品推荐 -->
-      <recommend
-        v-if="recommend.length !== 0"
-        :recommend="recommend"
-      ></recommend>
-      <!-- 楼层1楼 -->
-      <floornum>
-        <template #num>1F</template>
-        <template #numname>{{ floorName[0] }}</template>
-      </floornum>
-      <floor v-if="floor1.length !== 0" :floor1="floor1"></floor>
-      <!-- 楼层2楼 -->
-      <floornum>
-        <template #num>2F</template>
-        <template #numname>{{ floorName[1] }}</template>
-      </floornum>
-      <floor v-if="floor2.length !== 0" :floor1="floor2"></floor>
-      <!-- 楼层3 -->
-      <floornum>
-        <template #num>3F</template>
-        <template #numname>{{ floorName[2] }}</template>
-      </floornum>
-      <floor v-if="floor3.length !== 0" :floor1="floor3"></floor>
-      <!-- 热销商品 -->
-      <hot v-if="hotGoods.length !== 0" :hotGoods="hotGoods"></hot>
-    </div>
-    <!-- 搜索时的页面 -->
-    <div v-if="show === false">
-      <search :list="list" :value="value" @modify="modify"></search>
+    <div>
+      <div v-if="loading === false" class="load flex-ja">
+        <load></load>
+      </div>
+      <div v-else>
+        <!-- 首页数据 -->
+        <div v-if="show === true">
+          <!-- 轮播图 -->
+          <carousel v-if="slides.length !== 0" :slides="slides"></carousel>
+          <!-- 分类 -->
+          <homepage
+            v-if="category.length !== 0"
+            :category="category"
+            :imgs="imgs"
+          ></homepage>
+          <!-- 商品推荐 -->
+          <recommend
+            v-if="recommend.length !== 0"
+            :recommend="recommend"
+          ></recommend>
+          <!-- 楼层1楼 -->
+          <floornum>
+            <template #num>1F</template>
+            <template #numname>{{ floorName[0] }}</template>
+          </floornum>
+          <floor v-if="floor1.length !== 0" :floor1="floor1"></floor>
+          <!-- 楼层2楼 -->
+          <floornum>
+            <template #num>2F</template>
+            <template #numname>{{ floorName[1] }}</template>
+          </floornum>
+          <floor v-if="floor2.length !== 0" :floor1="floor2"></floor>
+          <!-- 楼层3 -->
+          <floornum>
+            <template #num>3F</template>
+            <template #numname>{{ floorName[2] }}</template>
+          </floornum>
+          <floor v-if="floor3.length !== 0" :floor1="floor3"></floor>
+          <!-- 热销商品 -->
+          <hot v-if="hotGoods.length !== 0" :hotGoods="hotGoods"></hot>
+        </div>
+        <!-- 搜索时的页面 -->
+        <div v-if="show === false">
+          <search :list="list" :value="value" @modify="modify"></search>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -92,6 +99,7 @@ export default {
       hotGoods: [], //热销商品
       list: [], //搜索的数据
       flag: true,
+      loading: false,
     };
   },
   components: { Carousel, Homepage, Recommend, Floor, Hot, Search },
@@ -138,9 +146,7 @@ export default {
       this.$api
         .search({ value: this.value })
         .then((res) => {
-          // console.log(res);
           this.list = res.data.list; //搜索获得的数据
-          // console.log(this.list);
         })
         .catch((err) => {
           console.log(err);
@@ -168,6 +174,9 @@ export default {
       .recommend()
       .then((res) => {
         // console.log(res);
+        if (res.code === 200) {
+          this.loading = true;
+        }
         this.slides = res.data.slides; //轮播图数据
         this.category = res.data.category; // 分类数据
         this.imgs = res.data.advertesPicture.PICTURE_ADDRESS;
@@ -189,10 +198,8 @@ export default {
   },
   watch: {
     value(val) {
-      // console.log(val);
       if (val !== "") {
         this.search(val);
-        // console.log(this.arr);
       } else {
         this.list = [];
       }
@@ -207,7 +214,6 @@ export default {
   height: 25px;
   margin-left: 20px;
   border: none;
-  // background-color: #f2f2f2;
   display: flex;
   align-content: center;
 }
@@ -215,5 +221,8 @@ export default {
   width: 100%;
   overflow: hidden;
   background: #eee;
+}
+.load {
+  height: 550px;
 }
 </style>

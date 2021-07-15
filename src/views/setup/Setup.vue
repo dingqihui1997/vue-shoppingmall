@@ -19,7 +19,7 @@
       </div>
       <!-- 用户名 -->
       <div class="one flex-a">
-        <div class="user">用户名</div>
+        <div class="user">昵称</div>
         <van-field
           v-model="userInfo.nickname"
           placeholder="请输入用户名"
@@ -27,7 +27,7 @@
         />
       </div>
       <div class="one flex-a">
-        <div class="user">昵称</div>
+        <div class="user">用户名</div>
         <van-field v-model="userInfo.username" disabled></van-field>
       </div>
       <!-- 性别 -->

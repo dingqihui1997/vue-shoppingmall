@@ -50,7 +50,7 @@ export default {
   computed: {
     badge() {
       if (localStorage.getItem("name")) {
-        if (this.$store.state.badge === 0) {
+        if (this.$store.state.badge == 0) {
           return "";
         } else {
           return this.$store.state.badge;

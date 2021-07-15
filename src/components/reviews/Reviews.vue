@@ -55,10 +55,6 @@ export default {
   methods: {},
   mounted() {
     this.anonymous = this.comment.anonymous;
-    // this.comment.map((item) => {
-    //   this.$set(item, "user", []);
-    // });
-    console.log(this.comment);
   },
   computed: {},
   watch: {},

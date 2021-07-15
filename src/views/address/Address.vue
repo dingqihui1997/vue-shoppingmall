@@ -57,14 +57,21 @@ export default {
         .getAddress()
         .then((res) => {
           this.address = res.address;
+          let list = this.address.filter((item) => {
+            //过滤出默认地址
+            return item.isDefault === true;
+          });
+          let num = this.address.indexOf(list[0]); //查找默认地址是第几个下标
+          this.address.splice(num, 1); //先在原数组删除，
+          this.address.unshift(list[0]); //然后添加到第一项
           this.address.map((item) => {
             //新增一个属性动态绑定，才能单选一个
             this.$set(item, "id", item._id);
             if (item.isDefault) {
+              //勾选默认的
               this.chosenAddressId = item.id;
             }
           });
-          console.log(this.address);
         })
         .catch((err) => {
           console.log("请求失败", err);
@@ -73,7 +80,7 @@ export default {
     select(item) {
       //选择地址时做的操作
       if (localStorage.getItem("flag")) {
-        //如果储存的有值，就不做操作，
+        //如果储存的有值，就不做操作，从结算过来的
       } else {
         this.$router.back(); //没有值就直接返回上一步了
         localStorage.setItem("Address", JSON.stringify(item)); //item是选择的哪一个地址

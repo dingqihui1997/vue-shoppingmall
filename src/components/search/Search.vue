@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <!-- 输入框没有值时，就显示历史记录-->
-    <div v-if="value === ''">
+    <div v-if="value === '' && name !== null">
       <div class="flex-sb history">
         <div>历史搜索</div>
         <div><van-icon name="delete-o" @click="del" /></div>
@@ -16,7 +16,7 @@
           class="search"
           @click="click(item)"
         >
-          {{ item }}
+          {{ item.name }}
         </div>
       </div>
     </div>
@@ -59,33 +59,23 @@ export default {
     return {
       flag: false,
       arr: [], //储存的搜索历史
-      search: [], //
+      search: [], //搜索历史记录
       show: false,
+      name: null,
     };
   },
   components: {},
   methods: {
     details(item) {
-      //点击搜索出来的商品时触发
-      //储存历史记录
-      //先获取储存的值，如果有值，就给arr
-      if (localStorage.getItem("search")) {
-        this.arr = JSON.parse(localStorage.getItem("search")); //如果有值就等于arr
-        let num = null;
-        num = this.arr.find((item) => {
-          //去重过滤，如果找到返回元素，没找到返回undefined
-          return item === this.value;
+      if (localStorage.getItem("name")) {
+        //登录了才储存
+        this.$utils.saveHistory({
+          user: localStorage.getItem("name"),
+          key: "search",
+          data: this.value,
+          attr: "name",
         });
-        if (!num) {
-          //如果是没找到就是false 然后再push
-          this.arr.push(this.value);
-        }
-      } else {
-        //如果开始没储存，就push到arr再储存
-        this.arr.push(this.value);
       }
-      console.log(this.arr);
-      localStorage.setItem("search", JSON.stringify(this.arr));
       this.$api //点击商品跳转到详情
         .goodOne(item)
         .then((res) => {
@@ -93,7 +83,6 @@ export default {
             path: "/details",
             query: { id: item.id },
           });
-          // console.log(res);
         })
         .catch((err) => {
           console.log("请求失败", err);
@@ -101,18 +90,25 @@ export default {
     },
     click(item) {
       //分发事件让父组件修改value值
-      this.$emit("modify", item);
+      this.$emit("modify", item.name);
     },
     del() {
       this.show = true;
     },
     confirm() {
-      localStorage.removeItem("search");
+      localStorage.removeItem(`${localStorage.getItem("name")}searchHistory`); //删除历史搜索
       this.search = [];
     },
   },
   mounted() {
-    this.search = JSON.parse(localStorage.getItem("search"));
+    this.name = localStorage.getItem("name"); //获取用户名
+    let a = this.$utils.getHistory({
+      user: `${localStorage.getItem("name")}`,
+      key: "search",
+    });
+    if (a) {
+      this.search = a;
+    }
   },
   computed: {},
   watch: {},

@@ -31,7 +31,9 @@
           <div>创建时间：{{ item.add_time }}</div>
           <div>收货地址：{{ item.address }}</div>
           <div>
-            共计{{ item.order_list.length }}商品 合计：{{ item.mallPrice }}
+            共计{{ item.order_list.length }}商品 合计：{{
+              item.mallPrice.toFixed(2)
+            }}
           </div>
         </div>
       </div>
@@ -56,7 +58,7 @@ export default {
         .getMyOrder()
         .then((res) => {
           this.list = res.list;
-          console.log(this.list);
+          // console.log(this.list);
         })
         .catch((err) => {
           console.log("请求失败", err);
@@ -78,11 +80,13 @@ export default {
 .home {
   height: 100%;
   background: #eee;
+  padding-bottom: 10px;
   .box {
     width: 95%;
     margin: 10px;
     background: #fff;
     padding: 5px 10px;
+    border-radius: 5px;
   }
   .order {
     color: #d2591b;

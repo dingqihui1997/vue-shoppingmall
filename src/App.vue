@@ -11,6 +11,5 @@ html,
 body,
 #app {
   width: 100%;
-  // background: #eeeeee;
 }
 </style>

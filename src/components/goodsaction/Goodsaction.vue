@@ -3,17 +3,12 @@
   <div>
     <van-goods-action>
       <van-goods-action-icon icon="chat-o" text="客服" />
-      <div v-if="num">
-        <van-goods-action-icon
-          icon="cart-o"
-          text="购物车"
-          @click="goto"
-          :badge="badge"
-        />
-      </div>
-      <div v-else>
-        <van-goods-action-icon icon="cart-o" text="购物车" @click="goto" />
-      </div>
+      <van-goods-action-icon
+        icon="cart-o"
+        text="购物车"
+        @click="goto"
+        :badge="badge"
+      />
       <van-goods-action-button type="warning" text="加入购物车" @click="add" />
       <van-goods-action-button
         type="danger"
@@ -126,7 +121,7 @@ export default {
         //如果没登录就提示用户
         this.show = true;
       } else {
-        console.log(this.goodsOne);
+        // console.log(this.goodsOne);
         localStorage.removeItem("flag"); //控制地址列表返回路径
         this.$set(this.goodsOne, "count", this.count); //给详情新增属性数量属性,购买商品时的数量
         this.$set(this.goodsOne, "cid", this.goodsOne.id); //新增cid购买商品需要传
@@ -149,12 +144,14 @@ export default {
   computed: {
     badge() {
       //登录了才获取本地储存的值
-      if (this.$store.state.badge === 0) {
-        return "";
-      } else {
-        return this.$store.state.badge;
+
+      if (localStorage.getItem("name")) {
+        if (this.$store.state.badge == 0) {
+          return "";
+        } else {
+          return this.$store.state.badge;
+        }
       }
-      // return this.$store.state.badge; //获取加购的数量
     },
   },
   watch: {},

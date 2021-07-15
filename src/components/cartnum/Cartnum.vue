@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import { Dialog } from "vant";
 export default {
   name: "",
   props: {
@@ -102,35 +103,44 @@ export default {
         return item.check === true;
       });
       if (arr1.length === 0) {
+        //如果没选商品提示
         this.$toast("请选择商品");
       } else {
-        arr1.map((item) => {
-          this.cid.push(item.cid);
-        });
-        this.$api
-          .deleteShop(this.cid)
-          .then((res) => {
-            console.log(res);
-            if (res.code === 200) {
-              this.$toast("删除成功");
-              this.$emit("shop", ""); //分发事件让父组件删除
-            }
+        //选择了就提示下是否确定删除
+        Dialog.confirm({
+          message: "确定删除该商品吗？",
+        })
+          .then(() => {
+            //点击确定就删除
+            arr1.map((item) => {
+              this.cid.push(item.cid);
+            });
+            this.$api
+              .deleteShop(this.cid)
+              .then((res) => {
+                // console.log(res);
+                if (res.code === 200) {
+                  this.$toast("删除成功");
+                  this.$emit("shop", ""); //分发事件让父组件删除
+                }
+              })
+              .catch((err) => {
+                console.log("请求失败", err);
+              });
           })
-          .catch((err) => {
-            console.log("请求失败", err);
+          .catch(() => {
+            //取消操作
           });
       }
     }, //点击删除
     see(item) {
-      //点击查看详情
       console.log(item);
       this.$router.push({
         path: "/details",
         query: { id: item.cid },
       });
-    },
+    }, //点击查看详情
     gotobuy() {
-      //点击结算按钮，
       localStorage.removeItem("flag");
       let arr1 = this.shopList.filter((item) => {
         //过滤选中的
@@ -140,13 +150,13 @@ export default {
         //没选就提示用户选择商品
         this.$toast("请选择商品");
       } else {
-        console.log(this.shopList);
+        // console.log(this.shopList);
         //选中就储存，然后跳转到结算页面商品信息
         localStorage.setItem("commodity", JSON.stringify(arr1));
         localStorage.setItem("idDirect", 0); //判断是直接购买还是购物车购买
         this.$router.push("/settlement");
       }
-    },
+    }, //点击结算按钮，
   },
   mounted() {},
   computed: {

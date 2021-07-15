@@ -7,9 +7,10 @@ import Vant from 'vant';
 import 'vant/lib/index.css' //引入
 import top from './components/top/Top.vue' //注册全局组件
 import floornum from './components/flootnum/FloorNum.vue'
+import load from './load/load.vue'
 import utils from './utils'
 Vue.component('floornum', floornum)
-
+Vue.component('load', load)
 
 Vue.component('top', top)
 

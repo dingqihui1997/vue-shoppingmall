@@ -7,7 +7,11 @@
       /></template>
       <template #center>订单结算</template>
     </top>
-    <div class="box flex-a" v-if="Object.keys(list).length !== 0">
+    <div
+      class="box flex-a"
+      v-if="Object.keys(list).length !== 0"
+      @click="choice"
+    >
       <div><van-icon name="location-o" class="icono" /></div>
       <div class="name flex-d">
         <div class="flex-sb tel">
@@ -16,7 +20,7 @@
         </div>
         <div class="flex-sb tel">
           <div>收货地址：{{ list.address }}</div>
-          <div><van-icon name="arrow" @click="choice" /></div>
+          <div><van-icon name="arrow" /></div>
         </div>
       </div>
     </div>
@@ -84,9 +88,7 @@ export default {
     back() {
       if (localStorage.getItem("cart")) {
         //如果有值就是从详情直接购买过来的，返回详情
-        let id = this.$route.query.id;
-        console.log(id);
-        this.$router.push({ path: "/details", query: { id: id } }); //返回详情就清除
+        this.$router.push({ path: "/details", query: { id: this.arr[0].id } }); //返回详情就清除
       } else {
         this.$router.push("/cart");
         //没有就是从购物车购买的，就返回购物车，
@@ -116,13 +118,16 @@ export default {
             count: this.count, //数量
           })
           .then((res) => {
-            console.log(res);
+            // console.log(res);
             if (res.code === 200) {
+              this.$toast("结算完成");
               this.$router.push("/Order"); //结算成功，跳转已完成页面
-              let num = this.$store.state.badge; //修改购物车的数量，
-              num = num - this.arr.length; //用原有的值减去结算了的值，并修改
-              localStorage.setItem("num", num);
-              this.$store.commit("setBadge", num);
+              if (!buer) {
+                let num = this.$store.state.badge; //修改购物车的数量，
+                num = num - this.arr.length; //用原有的值减去结算了的值，并修改
+                localStorage.setItem("num", num);
+                this.$store.commit("setBadge", num);
+              }
             }
           })
           .catch((err) => {
@@ -159,8 +164,6 @@ export default {
     }
     localStorage.removeItem("Address");
     this.arr = JSON.parse(localStorage.getItem("commodity")); //商品信息
-    // console.log(this.arr);
-    // console.log(this.list);
   },
   computed: {
     num() {

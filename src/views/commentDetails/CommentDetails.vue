@@ -53,22 +53,18 @@ export default {
   components: {},
   methods: {
     evaluateOne() {
-      //获取单个评论
       this.$api
         .evaluateOne(this.goods.cid, this.goods._id)
         .then((res) => {
           this.obj = res.evaluateOne;
-          console.log(this.obj);
           this.anonymous = this.obj.anonymous; //是否匿名
           this.name = this.obj.user[0].nickname; //用户名
-          console.log(this.name);
           this.list = this.obj.goods;
-          console.log(this.list);
         })
         .catch((err) => {
           console.log("请求失败", err);
         });
-    },
+    }, //获取单个评论
     back() {
       //返回上一级
       this.$router.push("/evaluate");
@@ -108,7 +104,6 @@ export default {
   },
   mounted() {
     this.goods = JSON.parse(this.$route.query.goods);
-    console.log(this.goods);
     this.evaluateOne();
   },
   computed: {},
@@ -147,6 +142,7 @@ export default {
 }
 .content {
   margin-top: 10px;
+  margin-left: 10px;
 }
 .list {
   height: 100px;
