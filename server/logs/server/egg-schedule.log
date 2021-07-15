@@ -10,3 +10,9 @@
 2021-07-14 16:58:03,798 INFO 28264 [egg-schedule]: register schedule E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js
 2021-07-14 16:58:03,798 INFO 28264 [egg-schedule]: register schedule E:\Users\七环\Desktop\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
 2021-07-14 16:58:03,798 INFO 28264 [egg-schedule]: register schedule E:\Users\七环\Desktop\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-14 19:14:43,277 INFO 14004 [egg-schedule]: register schedule E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-14 19:14:43,277 INFO 14004 [egg-schedule]: register schedule E:\Users\七环\Desktop\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2021-07-14 19:14:43,277 INFO 14004 [egg-schedule]: register schedule E:\Users\七环\Desktop\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-14 19:14:43,977 INFO 1056 [Timer] E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 33316025ms at 2021-07-15 04:30:00.002
+2021-07-14 19:14:43,977 INFO 1056 [Timer] E:\Users\七环\Desktop\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 17116023ms at 2021-07-15 00:00:00.000
+2021-07-14 19:14:43,978 INFO 1056 [Timer] E:\Users\七环\Desktop\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 17117023ms at 2021-07-15 00:00:01.001

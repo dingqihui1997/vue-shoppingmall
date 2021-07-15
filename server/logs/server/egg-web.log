@@ -57,3 +57,20 @@
 2021-07-14 16:58:04,696 INFO 28264 [egg-mongoose] instance[0] start successfully
 2021-07-14 16:58:04,699 INFO 28264 [egg-watcher:application] watcher start success
 2021-07-14 16:58:04,711 INFO 28264 [egg:core] dump config after ready, 7ms
+2021-07-14 19:14:43,257 INFO 14004 [egg:logger] init all loggers with options: {"dir":"E:\\Users\\七环\\Desktop\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-07-14 19:14:43,278 INFO 14004 [egg-multipart] stream mode enable
+2021-07-14 19:14:43,602 INFO 14004 [egg-mongoose] connecting mongodb://127.0.0.1/shoppingMall
+2021-07-14 19:14:43,896 INFO 14004 [egg-static] starting static serve /public/ -> E:\Users\七环\Desktop\mall\server\app\public
+2021-07-14 19:14:43,902 INFO 14004 [egg-security] use methodnoallow middleware
+2021-07-14 19:14:43,903 INFO 14004 [egg-security] use noopen middleware
+2021-07-14 19:14:43,904 INFO 14004 [egg-security] use nosniff middleware
+2021-07-14 19:14:43,905 INFO 14004 [egg-security] use xssProtection middleware
+2021-07-14 19:14:43,905 INFO 14004 [egg-security] use xframe middleware
+2021-07-14 19:14:43,906 INFO 14004 [egg-security] use dta middleware
+2021-07-14 19:14:43,906 INFO 14004 [egg-security] compose 6 middlewares into one security middleware
+2021-07-14 19:14:43,920 INFO 14004 [egg:core] dump config after load, 4ms
+2021-07-14 19:14:43,924 INFO 14004 [egg-mongoose] starting...
+2021-07-14 19:14:43,956 INFO 14004 [egg-mongoose] mongodb://127.0.0.1/shoppingMall connected successfully
+2021-07-14 19:14:43,962 INFO 14004 [egg-mongoose] instance[0] start successfully
+2021-07-14 19:14:43,963 INFO 14004 [egg-watcher:application] watcher start success
+2021-07-14 19:14:43,970 INFO 14004 [egg:core] dump config after ready, 4ms
