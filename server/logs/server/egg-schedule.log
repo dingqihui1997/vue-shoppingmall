@@ -1,0 +1,3 @@
+2021-07-15 04:44:44,114 INFO 1056 [Timer] E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 85515889ms at 2021-07-16 04:30:00.003
+2021-07-15 04:44:44,173 INFO 14004 [Job#1626353084110347129867060001] E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js executing by app
+2021-07-15 04:44:44,196 INFO 14004 [Job#1626353084110347129867060001] E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js execute succeed, used 23ms. 

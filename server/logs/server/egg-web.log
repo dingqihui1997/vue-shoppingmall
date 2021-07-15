@@ -1,0 +1,7 @@
+2021-07-15 00:00:01,017 INFO 14004 [egg-logrotator] app logger reload: got log-reload message
+2021-07-15 02:00:10,015 WARN 14004 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-15 02:50:23,077 WARN 14004 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-15 04:44:44,117 WARN 14004 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-07-15 04:44:44,175 INFO 14004 [-/127.0.0.1/-/1ms SCHEDULE /__schedule?path=E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "C:\\Users\\七环\\AppData\\Local\\Temp\\egg-multipart-tmp\\server"
+2021-07-15 04:44:44,176 WARN 14004 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-07-15 04:44:44,196 INFO 14004 [-/127.0.0.1/-/23ms SCHEDULE /__schedule?path=E:\Users\七环\Desktop\mall\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end

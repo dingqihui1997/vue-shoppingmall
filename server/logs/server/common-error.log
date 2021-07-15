@@ -1,0 +1,24 @@
+2021-07-15 02:00:10,016 ERROR 1056 nodejs.ClusterClientNoResponseError: client no response in 1256686ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 1056
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-15 02:50:23,077 ERROR 1056 nodejs.ClusterClientNoResponseError: client no response in 191966ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 1056
+hostname: LAPTOP-F0FF6E0L
+
+2021-07-15 04:44:44,114 ERROR 1056 nodejs.ClusterClientNoResponseError: client no response in 6861011ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\Users\七环\Desktop\mall\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 1056
+hostname: LAPTOP-F0FF6E0L
+
